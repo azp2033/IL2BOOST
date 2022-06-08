@@ -151,13 +151,13 @@ void OnRenderState()
 {
     /*
     Booster::Config::Save();
-    Если необходимо добавить сохранение конфига используйте https://github.com/nlohmann/json/blob/develop/single_include/nlohmann/json.hpp
+    Р•СЃР»Рё РЅРµРѕР±С…РѕРґРёРјРѕ РґРѕР±Р°РІРёС‚СЊ СЃРѕС…СЂР°РЅРµРЅРёРµ РєРѕРЅС„РёРіР° РёСЃРїРѕР»СЊР·СѓР№С‚Рµ https://github.com/nlohmann/json/blob/develop/single_include/nlohmann/json.hpp
     json j;
     j["GrassDisabled"] = Config::GrassDiabled;
     j.dump();
-    и потом в файлик
-    а для загрузки выносим с файлика допустим в std::string или const char*
-    потом json j = json::parse(str);
+    Рё РїРѕС‚РѕРј РІ С„Р°Р№Р»РёРє
+    Р° РґР»СЏ Р·Р°РіСЂСѓР·РєРё РІС‹РЅРѕСЃРёРј СЃ С„Р°Р№Р»РёРєР° РґРѕРїСѓСЃС‚РёРј РІ std::string РёР»Рё const char*
+    РїРѕС‚РѕРј json j = json::parse(str);
     Config::GrassDisabled = j["GrassDisabled"].get<bool>();
     */
 }
@@ -214,15 +214,15 @@ void OnRender()
     }
 
     if (activeTab == 0) {
-        ImGui::Checkbox(u8"Выключить тени", &Booster::Config::DisableShadows);
-        ImGui::Checkbox(u8"Выключить траву", &Booster::Config::DisableGrass);
+        ImGui::Checkbox(u8"Р’С‹РєР»СЋС‡РёС‚СЊ С‚РµРЅРё", &Booster::Config::DisableShadows);
+        ImGui::Checkbox(u8"Р’С‹РєР»СЋС‡РёС‚СЊ С‚СЂР°РІСѓ", &Booster::Config::DisableGrass);
     }
 
     if (activeTab == 1) {
         for (int i = 0; i < Booster::Main::Binds.size(); i++) {
             if (ImGui::CollapsingHeader(Booster::Main::Binds[i].text)) {
                 ImGui::Columns(2);
-                ImGui::Checkbox(u8"Включен##AA", &Booster::Main::Binds[i].enabled);
+                ImGui::Checkbox(u8"Р’РєР»СЋС‡РµРЅ##AA", &Booster::Main::Binds[i].enabled);
                 ImGui::NextColumn();
                 if (!Booster::Main::Binds[i].enabled) {
                     ImGui::PushItemFlag(ImGuiItemFlags_Disabled, true);
@@ -239,7 +239,7 @@ void OnRender()
     }
 
     if (activeTab == 2) {
-        ImGui::Text(u8"Разработчик: azp2033");
+        ImGui::Text(u8"Р Р°Р·СЂР°Р±РѕС‚С‡РёРє: azp2033");
         ImGui::PushStyleColor(ImGuiCol_Text, Color(114, 145, 247).ToImColor());
         ImGui::Text(u8"vk.com/azp2033");
         ImGui::Text(u8"github.com/azp2033");
