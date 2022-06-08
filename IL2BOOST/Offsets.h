@@ -11,17 +11,17 @@ enum LightShadows
 
 namespace Offsets {
 	namespace SunSettings {
-		constexpr auto Update = 0x71FBE0;
+		constexpr auto Update = 0x71FBE0; // SunSettings.Update
 	};
 	namespace FoliageCell {
-		constexpr auto CalculateLOD = 0x7ED120;
+		constexpr auto CalculateLOD = 0x7ED120; // FoliageCell.CalculateLOD
 	};
 	namespace Light {
-		constexpr auto LightInstance = 0x18;
-		constexpr auto SetShadowsQuality = 0x1894C20;
+		constexpr auto LightInstance = 0x18; // Light.light
+		constexpr auto SetShadowsQuality = 0x1894C20; // Light.set_shadows
 	};
 	namespace ConsoleSystem {
-		constexpr auto SendToServer = 0x21ED8F0;
+		constexpr auto SendToServer = 0x21ED8F0; // ConsoleSystem.SendToserver
 	};
 };
 
