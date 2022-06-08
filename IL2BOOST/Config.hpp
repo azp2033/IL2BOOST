@@ -49,7 +49,7 @@ public:
 	}
 	IBind()
 	{
-		this->text = u8"Неизвестный бинд";
+		this->text = u8"РќРµРёР·РІРµСЃС‚РЅС‹Р№ Р±РёРЅРґ";
 		this->command = "";
 		this->key = 0;
 	}
@@ -58,10 +58,10 @@ public:
 namespace Booster {
 	namespace Main {
 		static std::vector<IBind> Binds = {
-			IBind(u8"Принять ТП", "chat.say /tpa", 'Y'),
-			IBind(u8"Отменить ТП", "chat.say /tpc", 'N'),
-			IBind(u8"Киты", "chat.say /kit", 'K'),
-			IBind(u8"Меню сервера", "chat.say /menu", 'M'),
+			IBind(u8"РџСЂРёРЅСЏС‚СЊ РўРџ", "chat.say /tpa", 'Y'),
+			IBind(u8"РћС‚РјРµРЅРёС‚СЊ РўРџ", "chat.say /tpc", 'N'),
+			IBind(u8"РљРёС‚С‹", "chat.say /kit", 'K'),
+			IBind(u8"РњРµРЅСЋ СЃРµСЂРІРµСЂР°", "chat.say /menu", 'M'),
 		};
 		static const char* Title = u8"IL2BOOST by azp2033";
 		static int MenuKey = VK_INSERT;
