@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Libs">
+      <UniqueIdentifier>{9b4418fd-954d-4619-b26a-2d8fd177e4a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libs\MinHook">
+      <UniqueIdentifier>{00b43761-c1a6-412e-b0f6-31d9ffbaa4cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libs\ImGUI">
+      <UniqueIdentifier>{21358424-c91e-4e9b-9968-dde87e10347a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Other">
+      <UniqueIdentifier>{9a18b8f4-f517-475a-a095-c9c55aa7efdd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IL2BOOST.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\minhook\buffer.c">
+      <Filter>Libs\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\minhook\hde32.c">
+      <Filter>Libs\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\minhook\hde64.c">
+      <Filter>Libs\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\minhook\hook.c">
+      <Filter>Libs\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\minhook\trampoline.c">
+      <Filter>Libs\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\kiero.cpp">
+      <Filter>Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui\imgui.cpp">
+      <Filter>Libs\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui\imgui_demo.cpp">
+      <Filter>Libs\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui\imgui_draw.cpp">
+      <Filter>Libs\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui\imgui_impl_dx11.cpp">
+      <Filter>Libs\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui\imgui_impl_win32.cpp">
+      <Filter>Libs\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui\imgui_widgets.cpp">
+      <Filter>Libs\ImGUI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Memory.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\minhook\buffer.h">
+      <Filter>Libs\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\minhook\hde32.h">
+      <Filter>Libs\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\minhook\hde64.h">
+      <Filter>Libs\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\minhook\MinHook.h">
+      <Filter>Libs\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\minhook\pstdint.h">
+      <Filter>Libs\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\minhook\table32.h">
+      <Filter>Libs\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\minhook\table64.h">
+      <Filter>Libs\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\minhook\trampoline.h">
+      <Filter>Libs\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\kiero.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imconfig.h">
+      <Filter>Libs\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imgui.h">
+      <Filter>Libs\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imgui_impl_dx11.h">
+      <Filter>Libs\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imgui_impl_win32.h">
+      <Filter>Libs\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imgui_internal.h">
+      <Filter>Libs\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imstb_rectpack.h">
+      <Filter>Libs\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imstb_textedit.h">
+      <Filter>Libs\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imstb_truetype.h">
+      <Filter>Libs\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="IconsFont.h">
+      <Filter>Other</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Libs\minhook\MinHook.def">
+      <Filter>Libs\MinHook</Filter>
+    </None>
+  </ItemGroup>
+</Project>
