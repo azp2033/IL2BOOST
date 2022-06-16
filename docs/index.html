@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>il2boost</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+    <body>
+        <div class="container">
+            <h2 class="text-center text-primary mb-5 mt-5">Немного описания и картинок</h2>
+            <div class="d-flex align-items-center mb-5" style="gap: 2rem;">
+                <img class="rounded-3" src="/docs/1.png">
+                <div>
+                    <blockquote class="blockquote">
+                        <p>Главное окно</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Основное окно бустера, в котором есть три кнопки, собственно как и три вкладки в бустере (Оптимизация, Бинды, Информация), открывается и закрывается на клавишу <span class="badge bg-dark">INSERT</span>.
+                    </figcaption>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mb-5" style="gap: 2rem;">
+                <div>
+                    <blockquote class="blockquote">
+                        <p>Окно оптимизации</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Тут и происходнят основные чудеса благодаря которым вы можете получить увеличенное кол-во кадров, из вариантов оптимизации <span class="badge bg-primary">Отключение теней</span>
+                        или <span class="badge bg-primary">Отключение травы</span>, значительно повышает кол-во кадров в сек.
+                    </figcaption>
+                </div>
+                <img class="rounded-3" src="/docs/2.png">
+            </div>
+            <div class="d-flex align-items-center mb-5" style="gap: 2rem;">
+                <img class="rounded-3" src="/docs/3.png">
+                <div>
+                    <blockquote class="blockquote">
+                        <p>Бинды</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Заготовленные администрацией команды для игроков, благодаря быстрому доступ к выданным командам повышается эффективность во время ведения боя или фарма ресурсов, есть возможность отключения, а так-же смены горячих клавиш на любые желаемые.
+                    </figcaption>
+                </div>
+            </div>
+            <h2 class="text-center text-primary mb-5">Документация</h2>
+            <h3 class="border-bottom pb-2 mb-2">Компиляция</h3>
+            <p>Ну для сборки исходного кода, необходимо его сначала <a href="https://github.com/azp2033/IL2BOOST/archive/refs/heads/main.zip">скачать</a>, так-же потребуется <b>Visual Studio 2019</b> или более свежая с <b>поддержкой классических приложений C++</b>, <b>свежим SDK</b> а так-же <b>компилятором версии 142 или более новым</b>.</p>
+            <p>После загрузки исходника распаковываем его и открываем в <b>Visual Studio</b></p>
+            <ol class="list-group list-group-numbered mb-2">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Первый шаг</div>
+                    Скачиваем и распаковываем <a href="https://github.com/azp2033/IL2BOOST/archive/refs/heads/main.zip">исходник</a>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Далее</div>
+                    Запускаем исходник в <b>Visual Studio</b>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">После этого</div>
+                    Начинаем редактировать файл <span class="badge bg-info">Config.hpp</span>, спускаемся вниз и видим такой кусок кода
+                    <div code="c_cpp" id="code-1" style="height: 200px !important;">
+            static std::vector<IBind> Binds = {
+                IBind(u8"Принять ТП", "chat.say /tpa", 'Y'),
+                IBind(u8"Отменить ТП", "chat.say /tpc", 'N'),
+                IBind(u8"Киты", "chat.say /kit", 'K'),
+                IBind(u8"Меню сервера", "chat.say /menu", 'M'),
+            };
+            static const char* Title = u8"IL2BOOST by azp2033";
+            static int MenuKey = VK_INSERT;
+
+            namespace Colors {
+                static Color Primary(68, 68, 255);
+                static Color Secondary(51, 51, 57);
+                static Color Text(255, 255, 255);
+                static Color Background(34, 34, 41);
+            };
+                    </div>
+                    тут мы можем настроить бинды, изменить заголовок, кнопку открытия меню, а так-же заменить цвета бустера.
+                </div>
+            </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Следующим этапом</div>
+                    Мы запускаем сборку кода и на выходе получаем два файла - <b>Запускатор и сам бустер</b>
+                </div>
+            </li>
+            </ol>
+            <p class="mb-5">Для запуска бустера запустите игру, после чего запустите лаунчер бустера..</p>
+            <h3 class="border-bottom pb-2 mb-2">Обновление оффсетов</h3>
+            <p>Для обновления оффсетов нам необходимо загрузить <a href="https://github.com/Perfare/Il2CppDumper/releases">IL2CPPDumper</a>, благодаря нему мы их и сможем получить..</p>
+            <ol class="list-group list-group-numbered mb-2">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Первый шаг</div>
+                    Скачиваем и распаковываем <a href="https://github.com/Perfare/Il2CppDumper/releases">IL2CPPDumper</a>
+                </div>
+            </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Следующим этапом</div>
+                    Переходим на рабочий стол после чего нажимаем сочитание клавиш <span class="badge bg-dark"><i class="fab fa-windows"></i></span> + <span class="badge bg-dark">R</span>, в открывшееся
+                    окно мы пишем <span class="badge bg-info">cmd.exe</span>
+                </div>
+            </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">После этого</div>
+                    После открытия консоли, мы копируем путь до папки с распакованным <b>IL2CPPDumper'ом</b> и пишем команду в консоль <span class="badge bg-primary">cd путь_до_папки</span>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Следующая команда</div>
+                    <span class="badge bg-primary">Il2CppDumper.exe путь_до_папки_с_игрой/GameAssembly.dll путь_до_папки_с_игрой/RustClient_Data/il2cpp_data/Metadata/global-metadata.dat</span>
+                </div>
+            </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">По итогу выполнения команды</div>
+                    Мы видим что в папочке куда вы распаковали <b>IL2CPPDumper</b> появился файл Dump.cs, он их хранит наши оффсеты..
+                </div>
+            </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Сами оффсеты</div>
+                    Нам необходимо 5 штук
+                    <div>
+                        1. В классе <span class="badge bg-primary">SunSettings</span> берем <b>RVA</b> от метода <span class="badge bg-primary">Update()</span> в моем случае это <span class="badge bg-dark">0x71FBE0</span> его мы ставим в <span class="badge border bg-light text-dark">SunSettings::Update</span>
+                    </div>
+                    <div>
+                        2. В классе <span class="badge bg-primary">SunSettings</span> берем <b>оффсет</b> от поля <span class="badge bg-primary">light</span> в моем случае это <span class="badge bg-dark">0x18</span> его мы ставим в <span class="badge border bg-light text-dark">Light::LightInstance</span>
+                    </div>
+                    <div>
+                        3. В классе <span class="badge bg-primary">FoliageCell</span> берем <b>RVA</b> от метода <span class="badge bg-primary">CalculateLOD()</span> в моем случае это <span class="badge bg-dark">0x7ED120</span> его мы ставим в <span class="badge border bg-light text-dark">FoliageCell::CalculateLOD</span>
+                    </div>
+                    <div>
+                        4. В классе <span class="badge bg-primary">Light</span> берем <b>RVA</b> от метода <span class="badge bg-primary">set_shadows(LightShadows value)</span> в моем случае это <span class="badge bg-dark">0x1894C20</span> его мы ставим в <span class="badge border bg-light text-dark">Light::SetShadowsQuality</span>
+                    </div>
+                    <div>
+                        5. В классе <span class="badge bg-primary">ConsoleSystem</span> берем <b>RVA</b> от метода <span class="badge bg-primary">SendToServer(string command)</span> в моем случае это <span class="badge bg-dark">0x21ED8F0</span> его мы ставим в <span class="badge border bg-light text-dark">ConsoleSystem::SendToServer</span>
+                    </div>
+                </div>
+            </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Готово</div>
+                    Компилируем исходник и используем :)
+                </div>
+            </li>
+            </ol>
+            <div class="mb-5 pb-5">
+                
+            </div>
+        </div>
+    </body>
+</html>
